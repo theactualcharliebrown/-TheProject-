@@ -1,0 +1,147 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  animation: fade-in-right 1s forwards;
+  margin: 5rem;
+}
+
+body {
+  background-image: url("https://scontent-dfw5-2.xx.fbcdn.net/v/t31.18172-8/410813_403437453002483_781128052_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=19026a&_nc_ohc=boF_g-iEWUwAX-0kR0L&_nc_ht=scontent-dfw5-2.xx&oh=00_AfC8iUeSpPXjazLF2BfK0uJqJyzglEiAC7TsjY66TQ8O-A&oe=647B6805");
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(211, 211, 211);
+  padding: 10px;
+  border: 5px solid steelblue;
+  border-radius: 5px;
+  font-size: larger;
+  text-align: center;
+}
+
+
+h1 {
+  font-weight: 800;
+  filter: drop-shadow(5px 5px 5px);
+  padding: 1.5rem;
+}
+
+h4::first-letter {
+  color: blue;
+  font-size: 150%;
+}
+
+h2 {
+  filter: drop-shadow(5px 5px 5px);
+  padding-top: 1rem;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  box-shadow: 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.hero-box {
+  padding: 10px;
+  border-top: 5px solid steelblue;
+  border-right: 5px solid steelblue;
+  border-left: 5px solid steelblue;
+  border-radius: 2px;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-item {
+  padding: 10px;
+  border-top: 5px solid steelblue;
+  border-right: 5px solid steelblue;
+  border-left: 5px solid steelblue;
+  border-radius: 2px;
+  align-items: center; 
+  text-align: center;
+} 
+
+.sub-head {
+  background-color: rgba(140,146,172,.75);
+  align-items: center;
+  text-align: center;
+}
+
+.head-box {
+ 
+  background-color: rgba(211, 211, 211,.75);
+  align-items: left;
+  text-align: left;
+}
+
+.bottom-grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 7px solid steelblue;
+  
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* a {
+  color: #6b8e23;
+} */
+
+a:link {
+  color: #801818;
+}
+
+a:visited {
+  color: #806828;
+}
+
+a:hover {
+  color: blue;
+}
+
+li {
+  font-size: large;
+}
+
+
+#cpimage {
+  width: 50px;
+  height: 50px;
+  box-shadow: 4px 4px 4px black;
+  transition: 1s;
+}
+
+@keyframes fade-in-right {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+.element-hover:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
+}
