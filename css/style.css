@@ -17,8 +17,15 @@ body {
   background-size: cover;*/
 }
 
+.button {
+  border: 3px solid steelblue;
+  border-radius: 5px;
+  background-color: rgba(211, 211, 211);
+  color: black;
+}
+
 .dark-mode {
-  background-color: black;
+  background-color: rgb(58, 56, 56);
   color: aliceblue;
 }
 
