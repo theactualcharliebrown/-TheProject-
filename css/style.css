@@ -81,8 +81,24 @@ img {
   border-radius: 2px;
   align-items: center;
   text-align: center;
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
 }
 
+.left {
+  transform-origin: left center;
+  transform: translateX(-50%);
+}
+
+.right {
+  transform-origin: right center;
+  transform: translateX(50%);
+}
+
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
 .sub-head {
   background-color: rgba(140, 146, 172, 0.75);
   align-items: center;
