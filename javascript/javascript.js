@@ -4,7 +4,7 @@ function toggler() {
  }
 
 
- // Write your code here
+
 const items = document.querySelectorAll('.grid-item')
 
 const options = {
@@ -13,9 +13,8 @@ const options = {
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('slide-in');
-    }
+  if (entry.isIntersecting) {
+  entry.target.classList.add('slide-in'); }
   });
 }, options)
 
