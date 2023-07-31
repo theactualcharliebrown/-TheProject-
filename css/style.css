@@ -17,7 +17,7 @@ body {
   background-size: cover;*/
 }
 
-.button {
+.toggler-button {
   border: 3px solid steelblue;
   border-radius: 5px;
   background-color: rgba(211, 211, 211);
@@ -111,21 +111,94 @@ img {
   text-align: left;
 }
 
+.contact-me {
+  background-image: linear-gradient(
+    to right,
+    rgb(70, 130, 180) 0% rgb(56, 120, 173) 100%
+  );
+  color: black;
+  font-size: 20px;
+  padding: 20px;
+}
+
+form {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+textarea {
+  width: 320px;
+  padding: 5px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+}
+
+input.invalid {
+  border: 1px solid red;
+}
+
+.error-hint {
+  color: red;
+}
+
+.submit-button {
+  padding: 10px;
+  font-size: 24px;
+  background: rgb(140, 146, 172);
+  border: 1px solid steelblue;
+  border-radius: 8px;
+  color: white;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you {
+  padding: 40px;
+  font-size: 34px;
+  text-align: center;
+}
+
 .bottom-grid-item {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 7px solid steelblue;
+  border-bottom: 5px solid steelblue;
+  border-left: 5px solid steelblue;
+  border-right: 5px solid steelblue;
 }
-
-.mb-3 {
+*/ .mb-3 {
   display: flex;
   flex-direction: column;
 }
 
-.form-group {
-  margin: 1rem;
+.footer {
+  display: block;
+  align-items: center;
 }
 
 /* .table {
@@ -154,7 +227,8 @@ li {
   font-size: large;
 }
 
-#cpimage {
+#iconimage {
+  margin: 10px;
   width: 50px;
   height: 50px;
   box-shadow: 4px 4px 4px black;
