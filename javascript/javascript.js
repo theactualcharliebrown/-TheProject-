@@ -1,46 +1,45 @@
 // Dark Mode Toggler
 function toggler() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
- }
+  $("body").toggleClass("dark-mode");
+}
 
-// Intersecting Slide-in
-const items = document.querySelectorAll('.grid-item')
+// Intersecting Slide-in(with Jquery)
+const items = $(".grid-item");
 
 const options = {
-  threshold: 0.5
-}
+  threshold: 0.5,
+};
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-  if (entry.isIntersecting) {
-  entry.target.classList.add('slide-in'); }
+    if (entry.isIntersecting) {
+      $(entry.target).addClass('slide-in');
+    }
   });
-}, options)
+}, options);
 
-items.forEach(item => {
+items.each((index, item) => {
   observer.observe(item);
-})
+});
 
-//Form Validation
-const form = document.querySelector('form');
-const thankYou = document.querySelector('.thank-you');
-const nameInput = document.querySelector('input[name="name"]');
-const emailInput = document.querySelector('input[name="email"]');
-const messageInput = document.querySelector('textarea[name="message"]');
-
+// Form Validation(Now with more Jquery!)
+const form = $('form');
+const thankYou = $('.thank-you');
+const nameInput = $('input[name="name"]');
+const emailInput = $('input[name="email"]');
+const messageInput = $('textarea[name="message"]');
 
 let isFormValid = false;
 let isValidationOn = true;
 
 const resetElm = (elm) => {
-  elm.classList.remove("invalid");
-  elm.nextElementSibling.classList.add("hidden");
+  $(elm).removeClass("invalid");
+  $(elm).next().addClass("hidden");
 }
 
 const invalidateElm = (elm) => {
-  elm.classList.add("invalid");
-  elm.nextElementSibling.classList.remove("hidden");
+  $(elm).addClass("invalid");
+  $(elm).next().removeClass("hidden");
 }
 
 const validateInputs = () => {
@@ -51,43 +50,88 @@ const validateInputs = () => {
   resetElm(emailInput);
   resetElm(messageInput);
 
-  
-  if (!nameInput.value) {
-   isFormValid = false;
-   invalidateElm(nameInput);
+  if (!nameInput.val()) {
+    isFormValid = false;
+    invalidateElm(nameInput);
   }
 
-  if (!emailInput.value) {
-   isFormValid = false;
-   invalidateElm(emailInput);
-   }
+  if (!emailInput.val()) {
+    isFormValid = false;
+    invalidateElm(emailInput);
+  }
 
-   if (!messageInput.value) {
+  if (!messageInput.val()) {
     isFormValid = false;
     invalidateElm(messageInput);
-   }
+  }
 }
 
-form.addEventListener("submit", (e) => {
+form.on("submit", (e) => {
   e.preventDefault();
   isValidationOn = true;
   validateInputs();
   if (isFormValid) {
     form.remove();
-    thankYou.classList.remove("hidden");
+    thankYou.removeClass("hidden");
   }
-})
+});
 
-nameInput.addEventListener('input', () => {
+nameInput.on('input', () => {
   validateInputs();
-})
+});
 
-emailInput.addEventListener('input', (event) => {
-  console.log(event);
+emailInput.on('input', () => {
   validateInputs();
-})
+});
 
-messageInput.addEventListener('input', (event) => {
-  console.log(event);
+messageInput.on('input', () => {
   validateInputs();
-})
+});
+
+
+//List Sorter
+// Merge Sort implementation using tail recursion
+
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const middle = Math.floor(arr.length / 2);
+  const left = arr.slice(0, middle);
+  const right = arr.slice(middle);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  let result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return result.concat(left.slice(leftIndex), right.slice(rightIndex));
+}
+
+// Output for List Sorter
+const sortButton = document.getElementById("sortButton");
+const inputList = document.getElementById("inputList");
+const output = document.getElementById("outputBox");
+
+sortButton.addEventListener("click", () => {
+  const inputValues = inputList.value.split(",").map(value => parseFloat(value));
+  const sortedList = mergeSort(inputValues);
+
+  output.innerHTML = `<p>Sorted List: ${sortedList.join(", ")}</p>`;
+});
+
+

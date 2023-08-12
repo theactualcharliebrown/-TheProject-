@@ -10,11 +10,8 @@
 }
 
 body {
-  /*background-image: url("https://scontent-dfw5-2.xx.fbcdn.net/v/t31.18172-8/410813_403437453002483_781128052_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=19026a&_nc_ohc=boF_g-iEWUwAX-0kR0L&_nc_ht=scontent-dfw5-2.xx&oh=00_AfC8iUeSpPXjazLF2BfK0uJqJyzglEiAC7TsjY66TQ8O-A&oe=647B6805");*/
   background-color: rgb(185, 214, 226);
   padding: 50px;
-  /* background-repeat: no-repeat;
-  background-size: cover;*/
 }
 
 .toggler-button {
@@ -44,6 +41,10 @@ h1 {
   font-weight: 800;
   filter: drop-shadow(5px 5px 5px);
   padding: 1.5rem;
+}
+
+h3 {
+  padding: 40px;
 }
 
 h4::first-letter {
@@ -112,11 +113,7 @@ img {
 }
 
 .contact-me {
-  background-image: linear-gradient(
-    to right,
-    rgb(70, 130, 180) 0% rgb(56, 120, 173) 100%
-  );
-  color: black;
+  background: linear-gradient(to right, rgb(70, 130, 180), rgb(173, 120, 56));
   font-size: 20px;
   padding: 20px;
 }
@@ -180,6 +177,8 @@ button:hover {
   padding: 40px;
   font-size: 34px;
   text-align: center;
+  border-right: 5px solid steelblue;
+  border-left: 5px solid steelblue;
 }
 
 .bottom-grid-item {
@@ -191,25 +190,11 @@ button:hover {
   border-left: 5px solid steelblue;
   border-right: 5px solid steelblue;
 }
-*/ .mb-3 {
-  display: flex;
-  flex-direction: column;
-}
 
 .footer {
   display: block;
   align-items: center;
 }
-
-/* .table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* a {
-  color: #6b8e23;
-} */
 
 a:link {
   color: #801818;
@@ -250,4 +235,48 @@ li {
 .element-hover:hover {
   transform: scale(1.1);
   transition: 0.25s;
+}
+
+.input-style {
+  font-size: 20px;
+  width: 400px;
+  height: 40px;
+  padding: 20px;
+  border: 3px solid #000000;
+  border-radius: 8px;
+}
+
+.output-style {
+  background: linear-gradient(to right, rgb(70, 130, 180), rgb(224, 101, 18));
+  font-size: 40px;
+  padding: 30px;
+  border: 3px solid #000000;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  background: linear-gradient(to left, rgb(70, 130, 180), rgb(224, 101, 18));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+#sortButton {
+  font-size: 30px;
+  font-weight: 550;
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: white;
+  border: 3px solid white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#sortButton:hover {
+  background-color: #0056b3;
 }
