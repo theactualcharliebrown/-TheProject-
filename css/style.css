@@ -17,7 +17,7 @@ body {
 .toggler-button {
   border: 3px solid steelblue;
   border-radius: 5px;
-  background-color: rgba(211, 211, 211);
+  background: linear-gradient(to bottom, rgb(70, 130, 180), rgb(219, 191, 148));
   color: black;
 }
 
@@ -29,7 +29,7 @@ body {
 .nav-menu {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(211, 211, 211);
+  background: linear-gradient(to bottom, rgb(70, 130, 180), rgb(219, 191, 148));
   padding: 10px;
   border: 5px solid steelblue;
   border-radius: 5px;
@@ -41,6 +41,7 @@ h1 {
   font-weight: 800;
   filter: drop-shadow(5px 5px 5px);
   padding: 1.5rem;
+  text-align: center;
 }
 
 h3 {
@@ -57,9 +58,9 @@ h2 {
   padding-top: 1rem;
 }
 
-img {
-  width: 300px;
-  height: 300px;
+.img {
+  width: 400px;
+  height: 400px;
   box-shadow: 10px 10px 10px;
   border-radius: 10px;
 }
@@ -113,13 +114,27 @@ img {
 }
 
 .contact-me {
-  background: linear-gradient(to right, rgb(70, 130, 180), rgb(173, 120, 56));
+  background: linear-gradient(to top, rgb(70, 130, 180), rgb(219, 191, 148));
   font-size: 20px;
   padding: 20px;
 }
 
 form {
   padding: 20px;
+}
+
+#map-form {
+  background: linear-gradient(to bottom, rgb(70, 130, 180), rgb(219, 191, 148));
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.form-label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .form-group {
@@ -192,16 +207,22 @@ button:hover {
 }
 
 .footer {
+  background: linear-gradient(to top, rgb(70, 130, 180), rgb(219, 191, 148));
   display: block;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  border-bottom: 5px solid steelblue;
+  border-left: 5px solid steelblue;
+  border-right: 5px solid steelblue;
 }
 
 a:link {
-  color: #801818;
+  color: blue;
 }
 
 a:visited {
-  color: #806828;
+  color: red;
 }
 
 a:hover {
@@ -237,20 +258,21 @@ li {
   transition: 0.25s;
 }
 
-.input-style {
+input {
   font-size: 20px;
   width: 400px;
   height: 40px;
   padding: 20px;
-  border: 3px solid #000000;
+  border: 1px solid #000000;
   border-radius: 8px;
 }
 
 .output-style {
-  background: linear-gradient(to right, rgb(70, 130, 180), rgb(224, 101, 18));
+  /* background: linear-gradient(to right, rgb(70, 130, 180), rgb(219, 191, 148)); */
+  /* background-color: rgba(219, 191, 148); */
   font-size: 40px;
   padding: 30px;
-  border: 3px solid #000000;
+  border: 1px solid rgb(70, 130, 180);
   border-radius: 8px;
   margin-top: 10px;
   text-align: center;
@@ -258,21 +280,26 @@ li {
 
 .container {
   text-align: center;
-  background: linear-gradient(to left, rgb(70, 130, 180), rgb(224, 101, 18));
+  background: linear-gradient(to bottom, rgb(70, 130, 180), rgb(219, 191, 148));
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   align-items: center;
 }
 
-#sortButton {
-  font-size: 30px;
-  font-weight: 550;
-  padding: 10px 20px;
-  margin-left: 10px;
+#map {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.button {
+  font-size: 23px;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin: 10px;
   background-color: #007bff;
   color: white;
-  border: 3px solid white;
+  border: 1px solid white;
   border-radius: 15px;
   cursor: pointer;
 }
